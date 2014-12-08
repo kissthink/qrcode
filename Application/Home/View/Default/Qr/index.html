@@ -1,0 +1,67 @@
+<extend name="Public/base" />
+
+<block name="title">
+  <title>公开讨论你遇到的问题或建议 qr.leipi.org</title>
+  <meta name="keyword" content="最简单二维码生成,一键生成二维码,智能生成二维码,javascript自动生成二维码,php生成二维码,php qrcode logo">
+  <meta name="description" content="最简单二维码生成，通过javascript植入网站即可自动生成二维码，可自定义尺寸、Logo、二维码类型！">
+</block>
+<block name="head">
+</block><!--end head-->
+
+<block name="body">
+
+
+<!-- Docs page layout -->
+<div class="bs-header" id="content">
+  <div class="container">
+    <h1>查看二维码</h1>
+  </div>
+</div>
+
+<div class="container">
+
+<div class="row">
+
+<if condition="$one">
+	
+<table class="table table-striped">
+<tr>
+	<th>二维码内容</th>	
+	<th>logo</th>
+	<th>创建时间</th>
+	<th>尺寸</th>
+</tr>
+<tr>
+	<td>{$one['content']}</td>
+	<td><if condition="$one['logo']">{$one['logo']}<else/>无</if></td>
+	<td>{:date('Y/m/d H:i',$one['dateline'])}</td>
+	<td>{$one['width']} X {$one['height']}</td>
+</tr>
+</table>
+<hr/>
+	<img src="/{$one.file_path}" alt="{$one['content']}"/>
+<else/>
+未找到二维码信息
+</if>
+
+
+
+
+
+
+
+</div><!--end row-->
+
+
+
+</div><!--end container-->
+
+
+ 
+</block><!--end body-->
+
+
+<block name="footer_js">
+
+
+</block><!--end footer_js-->

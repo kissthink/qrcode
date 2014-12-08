@@ -1,0 +1,107 @@
+<extend name="Public/base" />
+
+<block name="title">
+  <title>使用文档及开发教程 qr.leipi.org</title>
+  <meta name="keyword" content="最简单二维码生成,一键生成二维码,智能生成二维码,javascript自动生成二维码,php生成二维码,php qrcode logo">
+  <meta name="description" content="最简单二维码生成，通过javascript植入网站即可自动生成二维码，可自定义尺寸、Logo、二维码类型！">
+</block>
+<block name="head">
+<link href="__PUBLIC__/css/doc.css?{$_cjv}" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/js/highlight/highlight.css?{$_cjv}" rel="stylesheet" type="text/css" />
+</block><!--end head-->
+
+<block name="body">
+
+
+<!-- Docs page layout -->
+<div class="bs-header" id="content">
+  <div class="container">
+
+    <h1>开发文档</h1>
+    <p>
+        阅读本文档您可以快速学会使用表单设计器和开发扩展控件！
+    </p>
+    
+  </div>
+</div>
+
+<div class="container">
+<div class="row">
+
+
+        <div class="span3">
+          <div class="bs-sidebar hidden-print" role="complementary">
+            <ul class="nav bs-sidenav">
+                <li><a href="#overview">概览</a></li>
+                <li><a href="#install">安装网站</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        
+        <div class="span9" role="main">
+        
+        
+<div class="bs-docs-section">
+    <div class="page-header">
+    <h1 id="overview">概览</h1>
+    </div>
+    <p class="lead">QRcode Leipi Org</p>
+    <p>最简单二维码生成，通过javascript植入网站即可自动生成二维码，可自定义尺寸、Logo、二维码类型！</p>
+ 
+</div>
+
+        
+<div class="bs-docs-section">
+    <div class="page-header">
+        <h1 id="install">安装网站</h1>
+    </div>
+    <p>请先下载</p>
+    <ol>
+        <li><a href="{:U('/downloads')}" target="_blank">下载源码</a></li>
+        <li><a href="http://www.thinkphp.cn/" target="_blank">下载Thinkphp3.2完整版</a></li>
+    </ol>
+
+    <h3>安装</h3>
+    
+    <div class="bs-callout bs-callout-info">
+<p>
+  <ol>
+    <li>服务器把wwwroot设置为网站根目录</li>
+    <li>创建数据库并导入db目录下的Sql文件</li>
+    <li>修改数据库配置：Application\Common\Conf\config.php</li>
+  </ol>
+     
+</p>
+    </div>
+    
+
+    
+    
+</div>
+        
+        
+
+        
+        
+        
+
+      
+    
+        
+ </div><!--span9 end-->       
+ 
+   
+</div><!--end row-->
+
+</div><!--end container-->
+
+
+ 
+</block><!--end body-->
+
+
+<block name="footer_js">
+    <script src="__PUBLIC__/js/highlight/highlight.min.js"></script>
+    <script >hljs.initHighlightingOnLoad();</script>
+</block><!--end footer_js-->

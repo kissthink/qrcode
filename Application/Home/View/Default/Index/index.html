@@ -1,0 +1,146 @@
+<extend name="Public/base" />
+
+<block name="title">
+  <title>最简单二维码自动生成 qr.leipi.org</title>
+  <meta name="keyword" content="最简单二维码生成,一键生成二维码,智能生成二维码,javascript自动生成二维码,php生成二维码,php qrcode logo">
+  <meta name="description" content="最简单二维码生成，通过javascript植入网站即可自动生成二维码，可自定义尺寸、Logo、二维码类型！">
+</block>
+<block name="head">
+
+
+</block><!--end head-->
+
+<block name="body">
+
+
+<!-- Docs page layout -->
+<div class="bs-header" id="content">
+  <div class="container">
+
+    <h1><img src="__PUBLIC__/images/leipi_qrcode.png" width="64"/>自动生成二维码 <small>QRcode</small></h1>
+
+    <p>
+    在网站放置一行Javascript代码，即可自动生成二维码，如：商品二维码、博客文章<br/>
+    生成单个二维码，请转至<a href="http://pro.wwei.cn" target="_blank" title="生成二维码器">专业二维码生成器</a>
+    <br/>
+    交流Q群：<a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=9f841437d1d7f1b57758d8cfc097f8be5e791ec97d9e9e81020433cfbe423a77"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="WEB 表单设计器" title="点击加入 WEB 表单设计器"></a>  143263697
+    </p>
+
+  </div>
+</div>
+
+
+
+
+<div class="container">
+
+<div class="row">
+
+  <div class="span6">
+<form class="form-horizontal">
+  
+  <div class="control-group">
+    <label class="control-label" for="qrcode_width">宽度</label>
+    <div class="controls">
+      <input type="text" id="qrcode_width" name="qrcode_width" value="100" placeholder="二维码宽度">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="qrcode_height">高度</label>
+    <div class="controls">
+      <input type="text" id="qrcode_height" name="qrcode_height" value="100" placeholder="二维码高度">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="qrcode_content">二维码内容</label>
+    <div class="controls">
+      <input type="text" id="qrcode_content" placeholder="二维码内容">
+      <span class="help-inline">不填写内容会自动获取网址<br/>内容为网址时，要加上escape()<br/>如： _qrContent=escape('http://...&a=1&b=2');</span>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="qrcode_logo">Logo</label>
+    <div class="controls">
+      <input type="text" id="qrcode_logo" name="qrcode_logo" value="http://" placeholder="二维码Logo">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="qrcode_type">类型</label>
+    <div class="controls">
+      <select name="qrcode_type" id="qrcode_type">
+        <option value="auto">自动</option>
+        <option value="url">网址</option>
+        <option value="tel">电话</option>
+      </select>
+    </div>
+  </div>
+</form>
+  </div>
+  <div class="span6">
+
+      <div class="control-group">
+        <div class="controls">
+          <button type="button" class="btn btn-info" id="create_code">确定生成Js代码</button>
+		  已为大家生成<b>{$count}</b>个二维码。
+          <!--label class="checkbox">
+            <input type="checkbox" value="1" id="img_id"> 仅图片
+          </label-->
+        </div>
+      </div>
+    <textarea id="source" class="span6" rows="10">
+<script type="text/javascript">/* {:date('Y/m/d H:i')} */var _qrContent='',_qrLogo='',_qrWidth=100,_qrHeight=100,_qrType = 'auto';if(!_qrContent) var _qrContent =escape(document.location.href);document.write(unescape("%3Cscript src='http://qrcode.leipi.org/js.html?qw="+_qrWidth+"&qh="+_qrHeight+"&qt="+_qrType+"&qc="+escape(_qrContent)+"&ql="+escape(_qrLogo)+"' type='text/javascript'%3E%3C/script%3E"));</script>
+    </textarea>
+    <span class="help-inline">把代码复制到你要显示二维码的地方,看到以下效果为正常！</span>
+    <p>
+      <script type="text/javascript"> /* 2014/07/19 21:09 */var _qrContent='',_qrLogo='http://qrcode.leipi.org/Public/images/leipi_qrcode.png',_qrWidth=100,_qrHeight=100,_qrType = 'auto';
+      if(!_qrContent) {
+        var _qrContent =escape(document.location.href);
+      }
+      /*_qrContent = _qrContent.replace('index\.php','wap\.php');*/
+      document.write(unescape("%3Cscript src='http://qrcode.leipi.org/js.html?qw="+_qrWidth+"&qh="+_qrHeight+"&qt="+_qrType+"&qc="+escape(_qrContent)+"&ql="+escape(_qrLogo)+"' type='text/javascript'%3E%3C/script%3E"));</script>
+    </p>
+  </div>
+
+
+</div>
+      
+<div class="row">
+<hr/>
+<h4>百度相关 <small>点一下就是对我们最大的赞助</small></h4>
+<script type="text/javascript">
+/*自动二维码首页 960*90 创建于 2014-09-12*/
+var cpro_id = "u1711502";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+
+
+</div> <!-- /container -->
+
+
+
+</block><!--end body-->
+
+
+<block name="footer_js">
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/js/jquery-1.7.2.min.js?{$_cjv}"></script>
+<script type="text/javascript">
+var _qrContent =escape(document.location.href);
+
+$(function(){
+  $("#source").click(function(){
+    $(this).select();
+  });
+  $("#create_code").click(function(){
+    var _qrWidth = $("#qrcode_width").val(),_qrHeight = $("#qrcode_height").val(),_qrContent = $("#qrcode_content").val(),_qrLogo = $("#qrcode_logo").val(),_qrType = $("#qrcode_type").val();
+    _qrWidth = parseInt(_qrWidth);
+    _qrHeight = parseInt(_qrHeight);
+    if(_qrLogo =='http://') _qrLogo = '';
+
+    var html = "<"+"script type=\"text/javascript\">/* 2014/07/19 21:09 */var _qrContent='"+_qrContent+"',_qrLogo='"+_qrLogo+"',_qrWidth="+_qrWidth+",_qrHeight="+_qrHeight+",_qrType = '"+_qrType+"';if(!_qrContent) var _qrContent =escape(document.location.href);document.write(unescape(\"%3Cscript src='http://qrcode.leipi.org/js.html?qw=\"+_qrWidth+\"&qh=\"+_qrHeight+\"&qt=\"+_qrType+\"&qc=\"+escape(_qrContent)+\"&ql=\"+escape(_qrLogo)+\"' type='text/javascript'%3E%3C/script%3E\"));</script"+">";
+    $("#source").val(html);
+  });
+})
+</script>
+</block><!--end footer_js-->
